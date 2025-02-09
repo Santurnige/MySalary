@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/icons/add.png</file>
+        <file>resource/icons/home.png</file>
+        <file>resource/icons/pie-chart.png</file>
+        <file>resource/icons/settings.png</file>
+        <file>resource/icons/salary.png</file>
+        <file>resource/icons/about.png</file>
+        <file>resource/icons/delete.png</file>
+        <file>resource/icons/screach.png</file>
+    </qresource>
+</RCC>

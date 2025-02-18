@@ -8,5 +8,6 @@
         <file>resource/icons/about.png</file>
         <file>resource/icons/delete.png</file>
         <file>resource/icons/screach.png</file>
+        <file>resource/icons/select.png</file>
     </qresource>
 </RCC>

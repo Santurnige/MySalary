@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>385</width>
-    <height>739</height>
+    <width>363</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.5, y1:0.091, x2:0.511, y2:0.733, stop:0 rgba(248, 255, 135, 255), stop:1 rgba(255, 255, 255, 255));
-</string>
+color: rgb(35, 35, 35);</string>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
@@ -77,7 +77,7 @@ QTabBar::tab:selected {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <property name="iconSize">
        <size>
@@ -150,6 +150,9 @@ QTabBar::tab:selected {
                </property>
                <property name="text">
                 <string>00:00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -268,7 +271,7 @@ border-radius:25px;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <widget class="QLabel" name="label_3">
+            <widget class="QLabel" name="ui_text_thisMonth_label">
              <property name="font">
               <font>
                <pointsize>20</pointsize>
@@ -281,7 +284,7 @@ border-radius:25px;</string>
 color: rgb(35, 35, 35);</string>
              </property>
              <property name="text">
-              <string>За Текущий Месяц</string>
+              <string>За</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -373,6 +376,42 @@ color: rgb(35, 35, 35);</string>
             </property>
             <property name="text">
              <string>День</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="ui_addDay_spinBox">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>30</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(248, 255, 135);
+border:none;
+color: rgb(35, 35, 35);</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>31</number>
+            </property>
+            <property name="value">
+             <number>9</number>
             </property>
            </widget>
           </item>
@@ -482,7 +521,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QSpinBox" name="ui_addMoney_spinBox">
+           <widget class="QSpinBox" name="ui_addTotal_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -514,44 +553,8 @@ color: rgb(35, 35, 35);</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QSpinBox" name="ui_dayAdd_spinBox">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>30</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(248, 255, 135);
-border:none;
-color: rgb(35, 35, 35);</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
-            </property>
-            <property name="minimum">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <number>31</number>
-            </property>
-            <property name="value">
-             <number>9</number>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="1">
-           <widget class="QSpinBox" name="ui_addMonth_spinBox">
+           <widget class="QComboBox" name="ui_addMonth_comboBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -560,30 +563,89 @@ color: rgb(35, 35, 35);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>30</pointsize>
+              <pointsize>25</pointsize>
               <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(248, 255, 135);
-border:none;
-color: rgb(35, 35, 35);</string>
+             <string notr="true">QComboBox {
+	color: rgb(35, 35, 35);
+	background-color: rgb(248, 255, 135);
+}
+QComboBox QAbstractItemView {
+	color: rgb(35, 35, 35);
+	background-color: rgb(248, 255, 135);
+}</string>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertPolicy::NoInsert</enum>
             </property>
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
             </property>
-            <property name="minimum">
-             <number>1</number>
+            <property name="frame">
+             <bool>false</bool>
             </property>
-            <property name="maximum">
-             <number>12</number>
-            </property>
-            <property name="value">
-             <number>2</number>
-            </property>
+            <item>
+             <property name="text">
+              <string>Январь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Февраль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Март</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Апрель</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Май</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июнь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Август</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Сентябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Октябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ноябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Декабрь</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
@@ -744,7 +806,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="ui_chooseMonth_spinBox">
+           <widget class="QComboBox" name="ui_chooseMonth_comboBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -759,30 +821,89 @@ color: rgb(35, 35, 35);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>30</pointsize>
+              <pointsize>18</pointsize>
               <bold>true</bold>
              </font>
             </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(248, 255, 135);
-border:none;
-color: rgb(35, 35, 35);</string>
+             <string notr="true">QComboBox {
+	color: rgb(35, 35, 35);
+	background-color: rgb(248, 255, 135);
+}
+QComboBox QAbstractItemView {
+	color: rgb(35, 35, 35);
+	background-color: rgb(248, 255, 135);
+}</string>
             </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertPolicy::NoInsert</enum>
             </property>
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+            <property name="frame">
+             <bool>false</bool>
             </property>
-            <property name="minimum">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <number>12</number>
-            </property>
-            <property name="value">
-             <number>2</number>
-            </property>
+            <item>
+             <property name="text">
+              <string>Январь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Февраль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Март</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Апрель</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Май</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июнь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Июль</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Август</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Сентябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Октябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ноябрь</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Декабрь</string>
+             </property>
+            </item>
            </widget>
           </item>
           <item>
@@ -812,10 +933,18 @@ border:none;</string>
          </layout>
         </item>
         <item>
-         <widget class="QTableView" name="tableView">
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="ui_mainTableView">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(249, 255, 162);
 border:2px solid rgb(202, 206, 131);
+color: rgb(0, 0, 0);
 </string>
           </property>
          </widget>
@@ -823,43 +952,57 @@ border:2px solid rgb(202, 206, 131);
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
-           <widget class="QLabel" name="label_13">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>100</height>
-             </size>
-            </property>
+           <widget class="QLabel" name="label_3">
             <property name="font">
              <font>
-              <pointsize>11</pointsize>
+              <pointsize>22</pointsize>
               <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(35, 35, 35);
-background-color: rgb(255, 255, 255);</string>
+             <string notr="true">background:transparent;
+color: rgb(35, 35, 35);
+</string>
             </property>
             <property name="text">
-             <string>Выберите Элемент с Таблицы!</string>
+             <string>ID</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="ui_noteAbout_button">
+           <widget class="QSpinBox" name="ui_deleteId_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>100</height>
+              <height>40</height>
              </size>
             </property>
-            <property name="styleSheet">
-             <string notr="true">background:transparent;
-image: url(:/resource/icons/about.png);
-border:none;</string>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
             </property>
-            <property name="text">
-             <string/>
+            <property name="font">
+             <font>
+              <pointsize>22</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:15px;
+background-color: rgb(234, 234, 234);
+border:none;
+color: rgb(35, 35, 35);</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
             </property>
            </widget>
           </item>
@@ -868,13 +1011,43 @@ border:none;</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>100</height>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
              </size>
             </property>
             <property name="styleSheet">
              <string notr="true">background:transparent;
 border:none;
 image: url(:/resource/icons/delete.png);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ui_selectAll_button">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:transparent;
+image: url(:/resource/icons/select.png);
+border:none;</string>
             </property>
             <property name="text">
              <string/>

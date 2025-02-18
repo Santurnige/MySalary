@@ -50,7 +50,7 @@ color: rgb(35, 35, 35);</string>
      </widget>
     </item>
     <item>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="ui_mainTabWidget">
       <property name="styleSheet">
        <string notr="true">QTabWidget::tab-bar {
     alignment: center;
@@ -77,7 +77,7 @@ QTabBar::tab:selected {
        <enum>QTabWidget::TabShape::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="iconSize">
        <size>
@@ -138,7 +138,7 @@ QTabBar::tab:selected {
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_5">
+              <widget class="QLabel" name="ui_currentTime_Label">
                <property name="font">
                 <font>
                  <pointsize>25</pointsize>
@@ -156,7 +156,7 @@ QTabBar::tab:selected {
             </layout>
            </item>
            <item>
-            <widget class="QLabel" name="label_4">
+            <widget class="QLabel" name="ui_currentMonth_Label">
              <property name="font">
               <font>
                <pointsize>24</pointsize>
@@ -217,7 +217,7 @@ color: rgb(35, 35, 35);</string>
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber">
+            <widget class="QLCDNumber" name="ui_allSalary_lcdNumber">
              <property name="font">
               <font>
                <pointsize>9</pointsize>
@@ -289,7 +289,7 @@ color: rgb(35, 35, 35);</string>
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_2">
+            <widget class="QLCDNumber" name="ui_salaryThisMonth_lcdNumber">
              <property name="font">
               <font>
                <pointsize>9</pointsize>
@@ -423,7 +423,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QSpinBox" name="spinBox_3">
+           <widget class="QSpinBox" name="ui_addYear_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -482,7 +482,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QSpinBox" name="spinBox">
+           <widget class="QSpinBox" name="ui_addMoney_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -515,7 +515,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QSpinBox" name="spinBox_2">
+           <widget class="QSpinBox" name="ui_dayAdd_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -551,7 +551,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QSpinBox" name="spinBox_5">
+           <widget class="QSpinBox" name="ui_addMonth_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -606,7 +606,7 @@ color: rgb(35, 35, 35);</string>
          </widget>
         </item>
         <item>
-         <widget class="QPlainTextEdit" name="plainTextEdit">
+         <widget class="QPlainTextEdit" name="ui_addAbout">
           <property name="font">
            <font>
             <pointsize>21</pointsize>
@@ -638,7 +638,7 @@ padding:5px;</string>
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="ui_addNote_button">
             <property name="minimumSize">
              <size>
               <width>136</width>
@@ -705,7 +705,7 @@ QPushButton:hover{
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QSpinBox" name="spinBox_6">
+           <widget class="QSpinBox" name="ui_chooseYear_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -744,7 +744,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="spinBox_7">
+           <widget class="QSpinBox" name="ui_chooseMonth_spinBox">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -786,7 +786,7 @@ color: rgb(35, 35, 35);</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="ui_screachNotes_button">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -846,7 +846,7 @@ background-color: rgb(255, 255, 255);</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="ui_noteAbout_button">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -864,7 +864,7 @@ border:none;</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="ui_deleteNote_button">
             <property name="minimumSize">
              <size>
               <width>0</width>
